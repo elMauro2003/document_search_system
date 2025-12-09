@@ -1,0 +1,43 @@
+{% if results %}
+    <div class="alert alert-info">
+        Se encontraron {{ results_count }} resultados para "{{ query }}"
+        <small class="float-end">Tipo: {{ query_type }}</small>
+    </div>
+    
+    <div class="list-group">
+        {% for result in results %}
+            <div class="list-group-item list-group-item-action bg-dark text-light border-light mb-2">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                        {{ result.document.title }}
+                        <span class="badge bg-primary similarity-badge">
+                            {{ result.similarity }}% similitud
+                        </span>
+                    </h5>
+                    <small>ID: {{ result.doc_id }}</small>
+                </div>
+                <p class="mb-1 text-muted">
+                    {{ result.document.content|truncatechars:200 }}
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <small class="text-info">
+                        Subido: {{ result.document.uploaded_at|date:"d/m/Y H:i" }}
+                    </small>
+                    <a href="{% url 'document_detail' result.doc_id %}" 
+                       class="btn btn-sm btn-outline-info">
+                        <i class="bi bi-eye"></i> Ver Detalle
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% elif query %}
+    <div class="alert alert-warning">
+        No se encontraron resultados para "{{ query }}"
+    </div>
+{% else %}
+    <div class="alert alert-light">
+        <i class="bi bi-info-circle"></i>
+        Ingrese una consulta para buscar en los documentos.
+    </div>
+{% endif %}

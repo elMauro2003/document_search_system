@@ -1,0 +1,99 @@
+{% extends 'documents/base.html' %}
+
+{% block title %}Subir Documento - Sistema de Búsqueda{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-upload"></i> Subir Documento
+                </h4>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Título del documento:</label>
+                        {{ form.title }}
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Archivo (opcional):</label>
+                        <input type="file" 
+                               name="file" 
+                               class="form-control" 
+                               accept=".txt,.pdf,.doc,.docx">
+                        <div class="form-text">
+                            Suba un archivo de texto o ingrese el contenido manualmente abajo.
+                            Para archivos .txt, el contenido se extraerá automáticamente.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Contenido del documento:</label>
+                        {{ form.content }}
+                        <div class="form-text">
+                            Este contenido será indexado para búsquedas.
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="bi bi-upload"></i> Subir e Indexar
+                        </button>
+                        <a href="{% url 'index' %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i> Volver al inicio
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="bi bi-lightbulb"></i> Ejemplos de contenido
+                </h5>
+            </div>
+            <div class="card-body">
+                <p>Para probar el sistema, puede usar estos ejemplos:</p>
+                
+                <div class="accordion" id="examplesAccordion">
+                    <div class="accordion-item bg-dark border-light">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark text-light" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#example1">
+                                Ejemplo 1: Aprendizaje Automático
+                            </button>
+                        </h2>
+                        <div id="example1" class="accordion-collapse collapse" 
+                             data-bs-parent="#examplesAccordion">
+                            <div class="accordion-body">
+                                <pre class="text-light">El aprendizaje automático es un campo de la inteligencia artificial que se centra en desarrollar algoritmos que permitan a las computadoras aprender de los datos y mejorar su rendimiento en tareas específicas sin ser programadas explícitamente.</pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-dark border-light">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark text-light" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#example2">
+                                Ejemplo 2: Procesamiento de Lenguaje Natural
+                            </button>
+                        </h2>
+                        <div id="example2" class="accordion-collapse collapse" 
+                             data-bs-parent="#examplesAccordion">
+                            <div class="accordion-body">
+                                <pre class="text-light">El procesamiento del lenguaje natural es una rama de la inteligencia artificial que se dedica a la interacción entre computadoras y lenguaje humano. Incluye tareas como traducción automática, análisis de sentimientos y reconocimiento de voz.</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
