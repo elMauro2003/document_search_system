@@ -36,7 +36,6 @@ Aplicación web desarrollada en [Django](https://www.djangoproject.com/ "Django"
 ## Descargar el repositorio
 
 ```
-# Comando para descargar el repo
 git clone https://github.com/elMauro2003/document_search_system.git
       
 ```
