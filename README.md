@@ -85,7 +85,7 @@ python manage.py migrate
 	### Ejemplo práctico:
 	```"El aprendizaje automático es fascinante"```
 
-	 ####Procesamiento:
+	 ### Procesamiento:
 	 ```
 	Minúsculas: "el aprendizaje automático es fascinante"
 	Tokenización: ["el", "aprendizaje", "automático", "es", "fascinante"]
@@ -104,7 +104,7 @@ python manage.py migrate
 	• "data AND (science OR analysis)"
 	```
 
-	##### Cómo funciona: 
+	### Cómo funciona: 
 	```
 	# Consulta: "python AND django"
 	1. Parse: ["python", "AND", "django"]
@@ -112,7 +112,7 @@ python manage.py migrate
 	3. Resultado: Documentos que contienen AMBOS términos
 	```
 
-	##### B. Búsqueda Vectorial
+	### B. Búsqueda Vectorial
 	```
 	# Consulta: "machine learning python"
 	1. Vector consulta: {"machin":1, "learn":1, "python":1}
@@ -122,7 +122,7 @@ python manage.py migrate
 
 
 - **📐 Cálculo TF-IDF**
-	####Fórmulas implementadas:
+	### Fórmulas implementadas:
 	```
 	TF(term, doc) = frecuencia(term en doc) / total_términos(doc)
 	IDF(term) = log(N / (1 + df(term))) + 1
@@ -139,9 +139,9 @@ python manage.py migrate
 	TF-IDF = 0.03 × 1.2039 = 0.0361
 	```
 
-##🧪 Casos de Prueba Recomendados
+## 🧪 Casos de Prueba Recomendados
 
-####📚 Conjunto de Datos de Prueba
+### 📚 Conjunto de Datos de Prueba
 **Documento 1 - Inteligencia Artificial**
 
 **Título:** Fundamentos de IA
@@ -163,7 +163,7 @@ python manage.py migrate
 > Python es un lenguaje de programación ampliamente utilizado en ciencia de datos, aprendizaje automático y aplicaciones web. Bibliotecas populares incluyen NumPy, Pandas, Scikit-learn y TensorFlow para implementar algoritmos de machine learning.
 
 
-####🔍 Consultas para Probar
+### 🔍 Consultas para Probar
 1 . Búsqueda Booleana Básica
 - Encuentra documentos con ambos términos
 ```"inteligencia AND artificial"```
@@ -194,7 +194,7 @@ python manage.py migrate
 ```"máquina"         -- encuentra "máquinas"```
 
 
-#### 📊 Resultados Esperados
+###  📊 Resultados Esperados
 **Para consulta:  ```"python AND aprendizaje"```**
 
 📄 Python en Ciencia de Datos [92%]
@@ -205,7 +205,7 @@ python manage.py migrate
 
 
 ## ⚙️ Configuración y Personalización
-####🔧 Archivo de Configuración ```(settings.py)```
+### 🔧 Archivo de Configuración ```(settings.py)```
 
 	# Límites del sistema
 	MAX_DOCUMENTS = 1000      # Máximo de documentos
@@ -215,7 +215,7 @@ python manage.py migrate
 	STOPWORDS_LANGUAGE = 'english'  # Cambiar a 'spanish' para español
 	STEM_LANGUAGE = 'english'       # Stemmer a usar
 
-####🌐 Cambiar Idioma a Español
+### 🌐 Cambiar Idioma a Español
 
 1. Instalar stopwords en español:
 	```
