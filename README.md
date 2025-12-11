@@ -160,6 +160,7 @@ python manage.py migrate
 **Título:** Python en Ciencia de Datos
 > Python es un lenguaje de programación ampliamente utilizado en ciencia de datos, aprendizaje automático y aplicaciones web. Bibliotecas populares incluyen NumPy, Pandas, Scikit-learn y TensorFlow para implementar algoritmos de machine learning.
 
+---
 
 ### 🔍 Consultas para Probar
 1 . Búsqueda Booleana Básica
@@ -191,6 +192,7 @@ python manage.py migrate
 
 ```"máquina"         -- encuentra "máquinas"```
 
+---
 
 ###  📊 Resultados Esperados
 **Para consulta:  ```"python AND aprendizaje"```**
