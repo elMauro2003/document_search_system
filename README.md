@@ -143,14 +143,14 @@ python manage.py migrate
 **Documento 1 - Inteligencia Artificial**
 
 **Título:** Fundamentos de IA
-> La inteligencia artificial es la simulación de procesos de inteligencia humana por máquinas, especialmente sistemas informáticos. Las aplicaciones específicas de la IA incluyen sistemas expertos, procesamiento de lenguaje natural y visión por computadora.**
+> La inteligencia artificial es la simulación de procesos de inteligencia humana por máquinas, especialmente sistemas informáticos. Las aplicaciones específicas de la IA incluyen sistemas expertos, procesamiento de lenguaje natural y visión por computadora.
 
 ------------
 
 **Documento 2 - Machine Learning**
 
 **Título:** Aprendizaje Automático
-> El aprendizaje automático es un campo de la inteligencia artificial que permite a los sistemas aprender y mejorar automáticamente de la experiencia sin ser programados explícitamente. Se centra en el desarrollo de programas que pueden acceder a datos y aprender de ellos.**
+> El aprendizaje automático es un campo de la inteligencia artificial que permite a los sistemas aprender y mejorar automáticamente de la experiencia sin ser programados explícitamente. Se centra en el desarrollo de programas que pueden acceder a datos y aprender de ellos.
 
 
 ------------
